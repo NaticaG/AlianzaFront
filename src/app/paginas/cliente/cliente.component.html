@@ -1,0 +1,57 @@
+<router-outlet></router-outlet>
+
+    <form #formulario="ngForm">
+        <div class="login-page">
+            <mat-card class="mat-elevation-z12" class="tarjeta1">
+                <mat-card-title style="text-align:center;">
+                </mat-card-title>
+                <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+                    <mat-tab label="Clients">
+                        <mat-card-content>
+                            <form #formulario="ngForm">
+
+                                <mat-form-field>
+                                    <input matInput placeholder="Name" required name="nameClient"
+                                        [(ngModel)]="name" #nameClient="ngModel">
+                                    <mat-error *ngIf="nameClient.invalid">Name is required</mat-error>
+                                </mat-form-field>
+
+                                <mat-form-field>
+                                    <input matInput placeholder="Phone" required name="phoneClient"
+                                        [(ngModel)]="phone" #phoneClient="ngModel">
+                                    <mat-error *ngIf="phoneClient.invalid">Phone is required</mat-error>
+                                </mat-form-field>
+
+                                <mat-form-field>
+                                    <input matInput placeholder="E-mail" required name="emailClient"
+                                        [(ngModel)]="email" #emailClient="ngModel">
+                                    <mat-error *ngIf="emailClient.invalid">E-mail is required</mat-error>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Start date</mat-label>
+                                    <input matInput [matDatepicker]="startDate">
+                                    <mat-datepicker-toggle matIconSuffix [for]="startDate"></mat-datepicker-toggle>
+                                    <mat-datepicker #startDate></mat-datepicker>
+                                  </mat-form-field>
+
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>End date</mat-label>
+                                    <input matInput [matDatepicker]="endDate">
+                                    <mat-datepicker-toggle matIconSuffix [for]="endDate"></mat-datepicker-toggle>
+                                    <mat-datepicker #endDate></mat-datepicker>
+                                  </mat-form-field>
+
+                                <br />
+                                <button mat-raised-button color="primary" class="login-button"
+                                    (click)="registrarCliente()">
+                                    OK
+                                </button>
+                            </form>
+                        </mat-card-content>
+                    </mat-tab>
+                </mat-tab-group>
+            </mat-card>
+        </div>
+        <br />
+    </form>

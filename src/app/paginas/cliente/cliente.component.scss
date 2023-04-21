@@ -1,0 +1,11 @@
+
+  .tarjeta1 {
+    width: 30%;
+    margin: 1% auto;
+    border-radius: 8px;
+    mat-form-field, mat-checkbox {
+        width: 100%;
+        display: inline-block;
+        margin: auto;
+      }
+  }

@@ -1,0 +1,109 @@
+.menu {
+    height: 100vh;
+    float: left;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    width: 15%;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #ccc;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    color: #333;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #eee;
+}
+
+.logo {
+    height: 15% !important;
+    width: 100% !important;
+}
+
+table {
+    width: 100%;
+
+    td,
+    th,
+    tr {
+        text-align: center !important;
+    }
+}
+
+.tarjeta1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin: 10px;
+}
+
+.menu-button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    table {
+        //    display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    th,
+    td {
+        display: block;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+}
+
+
+.tarjetaCliente {
+    width: 30%;
+    margin: 1% auto;
+    border-radius: 8px;
+
+    mat-form-field,
+    mat-checkbox {
+        width: 100%;
+        display: inline-block;
+        margin: auto;
+    }
+}
